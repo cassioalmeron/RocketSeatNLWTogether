@@ -35,6 +35,11 @@ export function Home(){
             alert('Room does not exists!')
         }
 
+        if (!roomRef.val().endedAt)
+        {
+            alert('Room alrady closed!')
+        }
+
         history.push(`rooms/${roomCode}`);
     }, [history, roomCode]);
     
